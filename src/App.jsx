@@ -89,7 +89,10 @@ function App() {
           <section className="relative mt-12 flex w-full justify-center">
             <div className="relative flex w-full justify-center">
               <ScrollingCarousel items={items} activeIndex={activeIndex} />
-              <PhoneMockup activeItem={items[activeIndex]} />
+              <PhoneMockup
+                activeItem={items[activeIndex]}
+                activeIndex={activeIndex}
+              />
             </div>
           </section>
         </main>

@@ -22,7 +22,7 @@ function Hero() {
 
       <p className="mt-4 max-w-[560px] text-base text-olive-500 sm:text-lg">
         Use the Olive Food Scanner App to Instantly Eliminate Harmful Ingredients
-        from Your Family&apos;s Diet and Get Expert-Backed Food Insights
+        from Your Family&apos;s Diet and Get Expert-Backed Food Info.
       </p>
 
       <div className="mt-7 flex flex-col items-center gap-4 sm:flex-row">
@@ -37,7 +37,7 @@ function Hero() {
         </button>
         <button
           type="button"
-          className="text-sm font-semibold text-olive-700 transition hover:text-olive-900"
+          className="rounded-full px-6 py-3 text-sm font-semibold text-olive-700 transition hover:bg-olive-900 hover:text-white"
         >
           Join the Olive Community →
         </button>

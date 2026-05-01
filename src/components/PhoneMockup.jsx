@@ -1,19 +1,22 @@
-function PhoneMockup({ activeItem }) {
+function PhoneMockup({ activeItem, activeIndex }) {
   return (
     <div className="relative z-10">
       <div className="relative mx-auto h-[520px] w-[280px] rounded-[38px] border border-olive-200 bg-white shadow-soft sm:h-[560px] sm:w-[320px]">
         <div className="absolute left-1/2 top-4 h-5 w-24 -translate-x-1/2 rounded-full bg-olive-950" />
         <div className="px-6 pb-8 pt-16">
           <div className="rounded-3xl bg-olive-50/70 p-4">
-            <div className="rounded-2xl bg-white p-4 shadow-sm">
+            <div
+              key={activeIndex}
+              className="translate-y-6 rounded-2xl bg-white p-4 opacity-0 shadow-sm transition-all duration-500 ease-out animate-phone-slide"
+            >
               <div className="h-28 w-full overflow-hidden rounded-xl bg-gray-100">
                 <img
                   src={activeItem.image}
                   alt={activeItem.title}
-                  className="h-full w-full object-cover"
+                  className="h-full w-full object-cover transition-transform duration-700 scale-105"
                 />
               </div>
-              <div className="mt-4">
+              <div className="mt-4 translate-y-2 opacity-0 animate-phone-text">
                 <h3 className="text-sm font-semibold text-olive-900">
                   {activeItem.title}
                 </h3>
