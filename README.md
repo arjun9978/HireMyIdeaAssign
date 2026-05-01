@@ -3,7 +3,8 @@
 This project recreates the Olive landing page with pixel-accurate layout, spacing,
 typography, and color matching based on a reference screenshot. The center
 carousel uses a synchronized focus system so the active card is highlighted and
-the phone mockup updates to match it.
+the phone mockup updates to match it. Dropdown menus are included in the navbar
+for a premium SaaS-style navigation experience.
 
 ## Features
 
@@ -11,6 +12,7 @@ the phone mockup updates to match it.
 - Controlled carousel motion with timed auto-rotation
 - Active card zoom effect with focus styling
 - Phone mockup synchronized to the active carousel card
+- Hover dropdowns for Solutions and Food
 
 ## Tech Stack
 
@@ -36,6 +38,17 @@ the phone mockup updates to match it.
 	- `npm run build`
 4. Preview the production build
 	- `npm run preview`
+
+## Deployment (Vercel)
+
+1. Push the repository to GitHub.
+2. Create a new project on Vercel and import the repo.
+3. Use the following settings:
+	- Root directory: `.`
+	- Framework preset: Vite
+	- Build command: `npm run build`
+	- Output directory: `dist`
+4. Deploy.
 
 ## Configuration
 
