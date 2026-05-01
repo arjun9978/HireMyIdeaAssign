@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: "Manrope", "Segoe UI", sans-serif;
+    background: #f6f7f4;
+    color: #2d3a2d;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: "Manrope", "Segoe UI", sans-serif;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+}
+
+@layer components {
+  .carousel-mask {
+    mask-image: linear-gradient(
+      90deg,
+      transparent,
+      #000 12%,
+      #000 88%,
+      transparent
+    );
+    -webkit-mask-image: linear-gradient(
+      90deg,
+      transparent,
+      #000 12%,
+      #000 88%,
+      transparent
+    );
+  }
+
+  .carousel-track {
+    display: flex;
+    gap: 28px;
+    width: max-content;
+  }
+
+  .carousel-card {
+    min-width: 160px;
+    border-radius: 18px;
+    background: #fff;
+    padding: 14px 14px 16px;
+    box-shadow: 0 12px 30px -18px rgba(23, 34, 23, 0.45);
+    opacity: 0.6;
+    filter: blur(1.5px);
+    transform: scale(0.9);
+    transition: transform 0.5s ease, opacity 0.5s ease, filter 0.5s ease;
+  }
+
+  .carousel-card.is-focus {
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(1);
+    z-index: 2;
+  }
+
+  .carousel-card.is-near {
+    opacity: 0.75;
+    filter: blur(0.5px);
+    transform: scale(0.94);
+  }
+}
+
